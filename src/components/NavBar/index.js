@@ -1,5 +1,7 @@
 import './styles.css'
 import {NavLink} from "react-router-dom";
+import {BsCartDash} from "react-icons/bs";
+import { AiOutlineHeart, AiOutlineUser } from 'react-icons/ai'
 
 export default function NavBar() {
     return (
@@ -27,9 +29,9 @@ export default function NavBar() {
                         <input className='search'/>
                     </div>
                     <div className="oliveBox">
-                        <button></button>
-                        <button></button>
-                        <button></button>
+                        <NavLink  to='/'><AiOutlineUser/></NavLink>
+                        <NavLink to='/'><BsCartDash/></NavLink>
+                        <NavLink to='/'><AiOutlineHeart/></NavLink>
                     </div>
                 </div>
             </div>

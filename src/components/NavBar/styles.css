@@ -5,7 +5,7 @@
     display: flex;
 }
 .greenBox{
-    background-color: green;
+    /*background-color: green;*/
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -13,10 +13,13 @@
     ;
 }
 .oliveBox{
-    background-color: olive;
+    /*background-color: olive;*/
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
+    width: 100px;
+    margin: auto;
 
 }
 .mainBox{
