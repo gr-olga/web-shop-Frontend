@@ -1,0 +1,41 @@
+.navbar-container{
+    width: 100%;
+    height: 60px;
+    background-color: #8568ff;
+    display: flex;
+}
+.greenBox{
+    background-color: green;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+    ;
+}
+.oliveBox{
+    background-color: olive;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+.mainBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 800px;
+}
+.navbar-link{
+    margin: auto;
+    font-family: 'Crimson Pro', serif;
+}
+.search{
+    margin-left: 50px;
+}
