@@ -32,13 +32,23 @@
 .navbar{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    width: 800px;
+    /*justify-content: space-between;*/
+    width: 300px;
 }
 .navbar-link{
     margin: auto;
     font-family: 'Crimson Pro', serif;
 }
 .search{
-    margin-left: 50px;
+    margin-left: 150px;
+}
+.logo{
+   margin: auto;
+}
+.logoShop{
+    color: white;
+}
+.iconSearch{
+    margin-left: -20px;
+    opacity: 10%;
 }

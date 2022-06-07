@@ -1,7 +1,7 @@
 import './styles.css'
 import {NavLink} from "react-router-dom";
 import {BsCartDash} from "react-icons/bs";
-import { AiOutlineHeart, AiOutlineUser } from 'react-icons/ai'
+import { AiOutlineHeart, AiOutlineUser, AiOutlineSearch } from 'react-icons/ai'
 
 export default function NavBar() {
     return (
@@ -9,6 +9,9 @@ export default function NavBar() {
             <div className="navbar-container">
                 <div className="mainBox">
                     <div className="greenBox">
+                        <div className="logo">
+                       <span>The</span><span className='logoShop'>Shop</span>
+                        </div>
                         <nav className="navbar">
                             <NavLink
                                 to='/'
@@ -26,7 +29,7 @@ export default function NavBar() {
                                 style={({isActive}) =>
                                     isActive ? {color: "white"} : undefined}>Detail </NavLink>
                         </nav>
-                        <input className='search'/>
+                        <input className='search'/><AiOutlineSearch className='iconSearch'/>
                     </div>
                     <div className="oliveBox">
                         <NavLink  to='/'><AiOutlineUser/></NavLink>
