@@ -1,0 +1,91 @@
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+    background-color: rgba(13, 14, 67, 1);
+    height: 300px;
+    align-items: baseline;
+    padding-top: 30px;
+}
+
+.the {
+    color: white;
+    font-family: 'Crimson Pro', serif;
+    font-size: 20px;
+}
+
+.shop {
+    color: rgba(133, 104, 255, 1);
+    font-family: 'Crimson Pro', serif;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.signUp {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 150px;
+    margin-left: 100px;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 auto;
+}
+
+.title {
+    margin: 0;
+    color: white;
+    font-size: 18px;
+    font-family: 'Crimson Pro', serif;
+
+}
+
+.navBar {
+
+}
+
+.shareBox {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.navElement {
+    list-style: none;
+    font-weight: lighter;
+    color: rgba(238, 239, 251, 1);
+    font-size: 14px;
+    font-family: 'Crimson Pro', serif;
+}
+
+.share-buttons {
+    color: rgba(238, 239, 251, 1);
+    display: flex;
+    align-items: center;
+}
+
+.share {
+    margin-right: 5px;
+}
+
+.input {
+    border: none;
+    border-radius: 5px;
+    background: #fff;
+}
+
+.signUpBtn {
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(133, 104, 255, 1);
+    color: white;
+}
