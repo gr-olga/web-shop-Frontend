@@ -1,0 +1,55 @@
+.productIng {
+    width: 250px;
+}
+
+.detail_box {
+    display: grid;
+    width: 600px;
+    margin: auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 0px;
+}
+
+.rating {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.add-button {
+    border-radius: 8px;
+    background-color: rgba(255, 62, 178, 1);
+    margin-right: 10px;
+}
+
+.detail_description {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+.share-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.share {
+    margin-right: 5px;
+}
+
+.description-text {
+    font-weight: normal;
+    font-family: 'Crimson Pro', serif;
+    font-size: 16px;
+    text-align: start;
+}
+
+.category {
+    font-weight: unset;
+    font-family: 'Crimson Pro', serif;
+    font-size: 16px;
+    text-align: start
+}
