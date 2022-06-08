@@ -7,3 +7,15 @@
 .filters {
   margin: auto;
 }
+
+a {
+  outline: none;
+  text-decoration: none;
+  padding: 2px 1px 0;
+}
+
+a:link {
+}
+
+a:visited {
+}

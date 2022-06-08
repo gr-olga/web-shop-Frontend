@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Products } from "../../components";
 import "./productList.css";
+import { Link } from "react-router-dom";
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
@@ -25,15 +26,18 @@ const ProductList = () => {
       <div className="products">
         {products.map((product) => {
           return (
-            <Products
-              key={product.id}
-              title={product.title}
-              mainImage={product.mainImage}
-              price={product.price}
-              description={product.description}
-              rating={product.rating}
-              category={product.categoryId.title}
-            />
+            <Link to={`/detail/${product.id}`}>
+              {" "}
+              <Products
+                key={product.id}
+                title={product.title}
+                mainImage={product.mainImage}
+                price={product.price}
+                description={product.description}
+                rating={product.rating}
+                category={product.categoryId.title}
+              />
+            </Link>
           );
         })}
       </div>
