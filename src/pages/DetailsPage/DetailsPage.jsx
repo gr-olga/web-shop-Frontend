@@ -5,6 +5,7 @@ import {BsCartDash, BsFacebook, BsInstagram} from "react-icons/bs";
 import {AiFillTwitterCircle, AiOutlineHeart} from "react-icons/ai"
 import axios from "axios";
 import './DetailsPage.css'
+import LowerSlice from "../../components/LowerSlice/LowerSlice";
 
 export default function DetailsPage() {
     const params = useParams();
@@ -41,12 +42,12 @@ export default function DetailsPage() {
                             <button>add review</button>
                         </div>
                         <p>€ {product.price}</p>
-                        <h4>{product.description}</h4>
+                        <h4 className="description-text">{product.description}</h4>
                         <div>
                             <button className='add-button'><BsCartDash/> Add To cart</button>
                             <button><AiOutlineHeart/> Favorite</button>
                         </div>
-                        <h3>Category: {product.category.title}</h3>
+                        <h3 className="category">Category:  {product.category.title}</h3>
                         <div className="share-buttons">
                             <h5 className="share">Share</h5>
                             <BsFacebook className="share"/>
@@ -56,6 +57,7 @@ export default function DetailsPage() {
                     </div>
 
                 </div>
+                <LowerSlice/>
             </div>
         ) :
         (

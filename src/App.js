@@ -9,13 +9,13 @@ import Banner from "./components/Banner";
 function App() {
     return (
         <div className="App">
-          <NavBar/>
+            <NavBar/>
             <Banner/>
-                <Routes>
-                    <Route path='/' element={<HomePage/>}/>
-                    <Route path='/details/:id' element={<DetailsPage/>}/>
-                    <Route path='/shop' element={<ProductList/>}/>
-                </Routes>
+            <Routes>
+                <Route path='/' element={<HomePage/>}/>
+                <Route path='/details/:id' element={<DetailsPage/>}/>
+                <Route path='/shop' element={<ProductList/>}/>
+            </Routes>
 
         </div>
     );

@@ -22,17 +22,34 @@
     background-color: rgba(255, 62, 178, 1);
     margin-right: 10px;
 }
-.detail_description{
+
+.detail_description {
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: start;
 }
-.share-buttons{
+
+.share-buttons {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-.share{
+
+.share {
     margin-right: 5px;
+}
+
+.description-text {
+    font-weight: normal;
+    font-family: 'Crimson Pro', serif;
+    font-size: 16px;
+    text-align: start;
+}
+
+.category {
+    font-weight: unset;
+    font-family: 'Crimson Pro', serif;
+    font-size: 16px;
+    text-align: start
 }
