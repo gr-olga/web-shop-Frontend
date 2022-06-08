@@ -1,0 +1,9 @@
+.productListPage {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1000px;
+}
+.filters {
+  margin: auto;
+}
