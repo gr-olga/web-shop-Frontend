@@ -6,6 +6,7 @@ import {AiFillTwitterCircle, AiOutlineHeart} from "react-icons/ai"
 import axios from "axios";
 import './DetailsPage.css'
 import LowerSlice from "../../components/LowerSlice/LowerSlice";
+import RatingStars from "../../components/Rating/RatingStars";
 
 export default function DetailsPage() {
     const params = useParams();
@@ -37,17 +38,22 @@ export default function DetailsPage() {
                     </div>
                     <div className="detail_description">
                         <h2 className='name'>{product.title}</h2>
-                        <div className="rating">
-                            <img src={stars} alt={'rating'}/>
-                            <button>add review</button>
-                        </div>
+                        <RatingStars rating={product.rating} />
+                        {/*<div className="rating">*/}
+                        {/*    <Rating rating={product.rating}/>*/}
+                        {/*    <img src={stars} alt={'rating'}/>*/}
+                        {/*    <button onClick={() => console.log("Add to review!")}>add review</button>*/}
+                        {/*</div>*/}
                         <p>€ {product.price}</p>
                         <h4 className="description-text">{product.description}</h4>
                         <div>
-                            <button className='add-button'><BsCartDash/> Add To cart</button>
-                            <button><AiOutlineHeart/> Favorite</button>
+                            <button className='add-button' onClick={() => console.log("Add to cart!")}>
+                                <BsCartDash/>
+                                Add To cart
+                            </button>
+                            <button onClick={() => console.log("Add to favorite!")}><AiOutlineHeart/> Favorite</button>
                         </div>
-                        <h3 className="category">Category:  {product.category.title}</h3>
+                        <h3 className="category">Category: {product.category.title}</h3>
                         <div className="share-buttons">
                             <h5 className="share">Share</h5>
                             <BsFacebook className="share"/>
