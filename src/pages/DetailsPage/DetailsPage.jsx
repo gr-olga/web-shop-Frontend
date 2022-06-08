@@ -39,11 +39,6 @@ export default function DetailsPage() {
                     <div className="detail_description">
                         <h2 className='name'>{product.title}</h2>
                         <RatingStars rating={product.rating} />
-                        {/*<div className="rating">*/}
-                        {/*    <Rating rating={product.rating}/>*/}
-                        {/*    <img src={stars} alt={'rating'}/>*/}
-                        {/*    <button onClick={() => console.log("Add to review!")}>add review</button>*/}
-                        {/*</div>*/}
                         <p>€ {product.price}</p>
                         <h4 className="description-text">{product.description}</h4>
                         <div>

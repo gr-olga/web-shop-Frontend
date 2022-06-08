@@ -5,6 +5,7 @@ import DetailsPage from "./pages/DetailsPage/DetailsPage";
 import ProductList from "./pages/ProductList/ProductList";
 import NavBar from "./components/NavBar";
 import Banner from "./components/Banner";
+import Footer from "./components/Footer/Footer";
 
 function App() {
     return (
@@ -16,7 +17,7 @@ function App() {
                 <Route path='/details/:id' element={<DetailsPage/>}/>
                 <Route path='/shop' element={<ProductList/>}/>
             </Routes>
-
+<Footer/>
         </div>
     );
 }
