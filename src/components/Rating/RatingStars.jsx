@@ -1,11 +1,9 @@
 import star from "../../images/star.png";
-import "./styles.css";
+import "./styles.css"
 
 export default function RatingStars(props) {
-  const roundingRating = Math.round(props.rating);
-  // console.log("roundingRating", roundingRating) // 1-5
-
-  const amount = [...Array(roundingRating).keys()]; // [null, null, null// ]
+    const roundingRating = Math.round(props.rating)
+    const amount = [...Array(roundingRating).keys()]; // [null, null, null// ]
 
   return (
     <div className="rating">
