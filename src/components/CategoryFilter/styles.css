@@ -1,0 +1,13 @@
+.categoryFilter {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  min-width: 300px;
+  color: #7e81a2;
+}
+
+.categories {
+  display: flex;
+  margin-left: 80px;
+  align-items: flex-start;
+}
