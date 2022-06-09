@@ -4,16 +4,18 @@ import HomePage from "./pages/HomePage/HomePage.jsx";
 import DetailsPage from "./pages/DetailsPage/DetailsPage";
 import ProductList from "./pages/ProductList/ProductList";
 import NavBar from "./components/NavBar";
+import Banner from "./components/Banner";
 
 function App() {
     return (
         <div className="App">
-          <NavBar/>
-                <Routes>
-                    <Route path='/' element={<HomePage/>}/>
-                    <Route path='/details/:id' element={<DetailsPage/>}/>
-                    <Route path='/shop' element={<ProductList/>}/>
-                </Routes>
+            <NavBar/>
+            <Banner/>
+            <Routes>
+                <Route path='/' element={<HomePage/>}/>
+                <Route path='/details/:id' element={<DetailsPage/>}/>
+                <Route path='/shop' element={<ProductList/>}/>
+            </Routes>
 
         </div>
     );
