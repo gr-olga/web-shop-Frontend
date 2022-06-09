@@ -40,13 +40,11 @@
     background-color: #8568ff;
     color: white;
 }
-
-.text{
-    color: rgba(169, 172, 198, 1);
-    font-size: 12px;
-    font-family: 'Crimson Pro', serif;
-    text-align: initial;
+.button:active {
+    background-color: yellowgreen;
+    color: black;
 }
+
 .title{
     color: rgba(21, 24, 117, 1);
     font-family: 'Crimson Pro', serif;

@@ -8,6 +8,7 @@ import Banner from "./components/Banner";
 import Footer from "./components/Footer/Footer";
 
 function App() {
+
     return (
         <div className="App">
             <NavBar/>
@@ -17,7 +18,7 @@ function App() {
                 <Route path='/details/:id' element={<DetailsPage/>}/>
                 <Route path='/shop' element={<ProductList/>}/>
             </Routes>
-<Footer/>
+            <Footer/>
         </div>
     );
 }
