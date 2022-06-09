@@ -1,12 +1,13 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Products, CategoryFilter } from "../../components";
+import { Products, CategoryFilter, RatingFilter } from "../../components";
 import "./productList.css";
 import { Link } from "react-router-dom";
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
   const [categoryFilter, setCategoryFilter] = useState([]);
+  const [ratingFilter, setRatingFilter] = useState([]);
 
   useEffect(() => {
     getProducts();
@@ -22,7 +23,19 @@ const ProductList = () => {
     }
   };
 
-  const onCheckHandler = (e) => {
+  //Filter by category
+
+  const categories = products.map((product) => {
+    return product.category.title;
+  });
+  const uniqueCategories = [...new Set(categories)];
+
+  const filteredProductsbyCategory = products.filter(
+    (product) =>
+      categoryFilter.length === 0 ||
+      categoryFilter.includes(product.category.title)
+  );
+  const onCheckCategoryHandler = (e) => {
     if (categoryFilter.includes(e.target.name)) {
       const newFilter = categoryFilter.filter((c) => c !== e.target.name);
       setCategoryFilter(newFilter);
@@ -31,31 +44,51 @@ const ProductList = () => {
     }
   };
 
-  const categories = products.map((product) => {
-    return product.category.title;
+  // FIlter by rating
+
+  const rating = products.map((product) => {
+    return Math.round(product.rating);
   });
-  const uniqueCategories = [...new Set(categories)];
+  const ratingCategories = [...new Set(rating)].sort((a, b) => b - a);
 
-  //console.log("categoryFilter", categoryFilter);
-
-  const filteredProducts = products.filter(
-    (product) =>
-      categoryFilter.length === 0 ||
-      categoryFilter.includes(product.category.title)
+  const filteredProductsbyCategoryAndRating = filteredProductsbyCategory.filter(
+    (product) => {
+      return (
+        ratingFilter.length === 0 ||
+        ratingFilter.includes(Math.round(product.rating).toString())
+      );
+    }
   );
-  //console.log("filteredProducts", filteredProducts);
+
+  const onCheckRatingHandler = (e) => {
+    if (ratingFilter.includes(e.target.name)) {
+      const newFilter = ratingFilter.filter((c) => c !== e.target.name);
+      setRatingFilter(newFilter);
+    } else {
+      setRatingFilter([...ratingFilter, e.target.name]);
+    }
+  };
 
   return (
     <div className="productListPage">
       <div className="filters">
-        <CategoryFilter
-          uniqueCategories={uniqueCategories}
-          onCheckHandler={onCheckHandler}
-          categoryFilter={categoryFilter}
-        />
+        <div>
+          <CategoryFilter
+            uniqueCategories={uniqueCategories}
+            onCheckHandler={onCheckCategoryHandler}
+            categoryFilter={categoryFilter}
+          />
+        </div>
+        <div>
+          <RatingFilter
+            ratingCategories={ratingCategories}
+            onCheckHandler={onCheckRatingHandler}
+            ratingFilter={ratingFilter}
+          />
+        </div>
       </div>
       <div className="products">
-        {filteredProducts.map((product) => {
+        {filteredProductsbyCategoryAndRating.map((product) => {
           return (
             <Link to={`/details/${product.id}`} key={product.id}>
               {" "}
