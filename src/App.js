@@ -6,8 +6,10 @@ import ProductList from "./pages/ProductList/ProductList";
 import NavBar from "./components/NavBar";
 import Banner from "./components/Banner";
 import Footer from "./components/Footer/Footer";
+import {useState} from "react";
 
 function App() {
+//Hello
     return (
         <div className="App">
             <NavBar/>
