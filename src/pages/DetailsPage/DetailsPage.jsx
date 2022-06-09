@@ -58,7 +58,7 @@ export default function DetailsPage() {
                     </div>
 
                 </div>
-                <LowerSlice/>
+                <LowerSlice details={product.description} name={product.title}/>
             </div>
         ) :
         (

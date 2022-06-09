@@ -17,7 +17,7 @@ function App() {
                 <Route path='/details/:id' element={<DetailsPage/>}/>
                 <Route path='/shop' element={<ProductList/>}/>
             </Routes>
-<Footer/>
+            <Footer/>
         </div>
     );
 }
