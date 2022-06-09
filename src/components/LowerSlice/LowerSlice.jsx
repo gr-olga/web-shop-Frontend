@@ -14,7 +14,6 @@ export default function LowerSlice(props) {
     const description = props.details
     const title = props.name
     const id = props.id
-    console.log(description, title)
     return (
         <div className="main">
             <div className="links">

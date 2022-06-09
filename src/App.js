@@ -6,6 +6,7 @@ import ProductList from "./pages/ProductList/ProductList";
 import NavBar from "./components/NavBar";
 import Banner from "./components/Banner";
 import Footer from "./components/Footer/Footer";
+import AddForm from "./components/AddForm/AddForm";
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
                 <Route path='/' element={<HomePage/>}/>
                 <Route path='/details/:id' element={<DetailsPage/>}/>
                 <Route path='/shop' element={<ProductList/>}/>
+                <Route path='/add-review' element={<AddForm/>}/>
             </Routes>
             <Footer/>
         </div>
