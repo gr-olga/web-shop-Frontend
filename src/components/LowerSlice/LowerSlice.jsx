@@ -13,6 +13,7 @@ export default function LowerSlice(props) {
 
     const description = props.details
     const title = props.name
+    const id = props.id
     console.log(description, title)
     return (
         <div className="main">
@@ -36,7 +37,7 @@ export default function LowerSlice(props) {
             <div className="articles">
                 {(current === "Description") && <Description description={description} title={title}/>}
                 {(current === "Additional Info") && <AdditionalInfo/>}
-                {(current === "Reviews") && <Reviews/>}
+                {(current === "Reviews") && <Reviews id={id}/>}
             </div>
 
         </div>

@@ -8,6 +8,7 @@ import Banner from "./components/Banner";
 import Footer from "./components/Footer/Footer";
 
 function App() {
+
     return (
         <div className="App">
             <NavBar/>
