@@ -48,7 +48,7 @@ export default function NavBar() {
             <AiOutlineSearch className="iconSearch" />
           </div>
           <div className="oliveBox">
-            <NavLink to="/">
+            <NavLink to="/login">
               <AiOutlineUser />
             </NavLink>
             <NavLink to="/">
