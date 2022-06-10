@@ -1,6 +1,5 @@
 import {useEffect, useState} from "react";
-import {useParams} from "react-router-dom";
-import stars from "../../images/img.png"
+import {Link, useParams} from "react-router-dom";
 import {BsCartDash, BsFacebook, BsInstagram} from "react-icons/bs";
 import {AiFillTwitterCircle, AiOutlineHeart} from "react-icons/ai"
 import axios from "axios";
@@ -28,7 +27,6 @@ export default function DetailsPage() {
 
     }, []);
 
-
     return product ? (
             <div>
                 <h5>Path: Home. Shop. {product.title}</h5>
@@ -38,7 +36,10 @@ export default function DetailsPage() {
                     </div>
                     <div className="detail_description">
                         <h2 className='name'>{product.title}</h2>
-                        <RatingStars rating={product.rating} />
+                        <RatingStars rating={product.rating}/>
+                        <button>
+                            <Link to={`/add-review/${product.id}`}>Add review</Link>
+                        </button>
                         <p>€ {product.price}</p>
                         <h4 className="description-text">{product.description}</h4>
                         <div>

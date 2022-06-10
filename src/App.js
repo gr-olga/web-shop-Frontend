@@ -6,6 +6,7 @@ import ProductList from "./pages/ProductList/ProductList";
 import NavBar from "./components/NavBar";
 import Banner from "./components/Banner";
 import Footer from "./components/Footer/Footer";
+import AddForm from "./components/AddForm/AddForm";
 import Login from "./pages/Login/Login";
 import Signin from "./pages/Signup/Signup";
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="/shop" element={<ProductList />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signin" element={<Signin />} />
+        <Route path='/add-review/:productId' element={<AddForm/>}/>
       </Routes>
       <Footer />
     </div>
