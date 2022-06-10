@@ -22,11 +22,10 @@ export default function Reviews(props) {
 
     }, []);
     const filteredReviews = reviews.filter((item) => item.productId === id)
-    console.log("filteredReviews", filteredReviews);
     return (
         <>
             {filteredReviews.map((item, index) =>
-               <ReviewsComp rating={item.rating} name={item.name} comment={item.comment}/>
+               <ReviewsComp key={index} rating={item.rating} name={item.name} comment={item.comment}/>
             )}
 
         </>

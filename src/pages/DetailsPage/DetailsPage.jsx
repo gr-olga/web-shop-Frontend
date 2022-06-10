@@ -38,7 +38,7 @@ export default function DetailsPage() {
                         <h2 className='name'>{product.title}</h2>
                         <RatingStars rating={product.rating}/>
                         <button>
-                            <Link to={`/add-review`}>Add review</Link>
+                            <Link to={`/add-review/${product.id}`}>Add review</Link>
                         </button>
                         <p>€ {product.price}</p>
                         <h4 className="description-text">{product.description}</h4>
