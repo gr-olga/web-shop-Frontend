@@ -9,21 +9,31 @@ import Footer from "./components/Footer/Footer";
 import AddForm from "./components/AddForm/AddForm";
 import Login from "./pages/Login/Login";
 import Signin from "./pages/Signup/Signup";
+import { useState } from "react";
 
 function App() {
+  const [token, setToken] = useState("");
+  console.log(token);
+
   return (
     <div className="App">
       <NavBar />
+      <p>{token}</p>
       <Banner />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/details/:id" element={<DetailsPage />} />
         <Route path="/shop" element={<ProductList />} />
-        <Route path="/login" element={<Login />} />
+        <Route
+          path="/login"
+          element={<Login setToken={setToken} token={token} />}
+        />
         <Route path="/signin" element={<Signin />} />
-        <Route path='/add-review/:productId' element={<AddForm/>}/>
+        <Route path="/add-review/:productId" element={<AddForm />} />
       </Routes>
       <Footer />
+
+      {/* <Login setToken={setToken} token={token} /> */}
     </div>
   );
 }

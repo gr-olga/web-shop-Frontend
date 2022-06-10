@@ -4,8 +4,7 @@ import { NavLink } from "react-router-dom";
 
 import "./styles.css";
 
-const Login = () => {
-  const [isSubmitted, setIsSubmitted] = useState(false);
+const Login = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [feaching, setFeaching] = useState(false);
@@ -22,12 +21,10 @@ const Login = () => {
           password: password,
         });
         if (response.status === 200) {
-          setIsSubmitted(true);
+          console.log("resposta do servidor", response);
+          props.setToken(response.data.token);
+          setFeaching(false);
         }
-
-        console.log("resposta do servidor", response);
-
-        setFeaching(false);
       } catch (error) {
         console.log(error.message);
         setFeaching(false);
@@ -42,7 +39,7 @@ const Login = () => {
     <div className="form">
       <form onSubmit={handleSubmit}>
         <div className="input-container">
-          <label>Username </label>
+          <label>Email </label>
           <input
             type="text"
             name="email"
@@ -74,7 +71,7 @@ const Login = () => {
     <div className="app">
       <div className="login-form">
         <div className="title">Sign In</div>
-        {isSubmitted ? <div>User is successfully logged in</div> : renderForm}
+        {props.token ? <div>User is successfully logged in</div> : renderForm}
       </div>
       <div>
         <div>Login page if you don't have a log in please sign up</div>
